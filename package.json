@@ -22,7 +22,6 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0"
   },
-
   "browserslist": [
     "chrome > 0",
     "ie >= 8",
