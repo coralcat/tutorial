@@ -45,6 +45,11 @@ header {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
   }
+
+}
+
+.tab-content section {
+  display: none;
 }
 
 .container > header {
@@ -212,18 +217,25 @@ section {
       }
     }
 
-    .sub-menu {
+    .tab-menu {
       display: flex;
       height: 100%;
 
       li {
+        margin: 0 1rem;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+        user-select: none;
         position: relative;
 
         &::before {
           opacity: 0;
           content: '';
           position: absolute;
-          left:0;
+          left: 0;
           right: 0;
           bottom: 0;
           height: 3px;
@@ -231,15 +243,13 @@ section {
           transition: .4s;
         }
 
-        &:hover::before {
+        &:hover::before,
+        &.active::before {
           opacity: 1;
         }
 
-        a {
-          margin: 0 1rem;
-          display: flex;
-          align-items: center;
-          height: 100%;
+        &.active {
+          color: darkslateblue;
         }
       }
     }
@@ -412,7 +422,7 @@ section {
   .rows {
     flex: 1 1 auto;
     overflow-y: auto;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
     border-radius: .5rem;
 
     .row {
@@ -422,7 +432,7 @@ section {
       cursor: pointer;
 
       &:hover {
-        background-color: rgba(255,255,255,.3);
+        background-color: rgba(255, 255, 255, .3);
       }
 
       &:last-of-type {
@@ -442,8 +452,8 @@ section {
     color: white;
   }
 
-  &> header {
-    border-color: rgba(255,255,255,.1);
+  & > header {
+    border-color: rgba(255, 255, 255, .1);
 
     ul a {
       color: #aaa7bb;
@@ -482,7 +492,7 @@ section {
       background-color: #28272f;
 
       .row {
-        border-color: rgba(255,255,255,.1);
+        border-color: rgba(255, 255, 255, .1);
 
         &:hover {
           background-color: #272146;

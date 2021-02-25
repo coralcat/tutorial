@@ -68,6 +68,10 @@ button {
   cursor: pointer;
 }
 
+.active {
+  display: flex !important;
+}
+
 .modal {
   display: none;
   position: absolute;
@@ -184,7 +188,7 @@ section {
       }
     }
 
-    .sub-menu a {
+    .tab-menu a {
       color: #a9a7b9 !important;
     }
   }
