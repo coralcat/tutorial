@@ -1,0 +1,33 @@
+{
+  "name": "react-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/coralcat/react-dashboard.git",
+  "author": "sori <sori.coralcat@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.prod",
+    "start": "npx webpack serve --config ./config/webpack.config.dev"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
