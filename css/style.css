@@ -1,0 +1,151 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4 h5,
+h6,
+p {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-coral {
+    width: 100%;
+    height: 100%;
+    background-blend-mode: lighten;
+    background-color: coral;
+    background-image: url("./../images/bg_coral.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    cursor: pointer;
+    transition: .4s all
+}
+
+.bg-effect {
+    background-color: plum;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform .4s;
+    opacity: .6;
+}
+
+.image:hover .bg-coral {
+    background-size: 120%;
+}
+
+.image:hover .bg-effect {
+    transform: translateX(0)
+}
+
+
+/* Tutorial 07 */
+h1 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: white;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    transition: all .4s;
+}
+
+.bg-coral:hover+h1 {
+    opacity: 1;
+    transform: translate(-50%, -50%)
+}
+
+/* Tutorial 08 */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text li {
+    opacity: 0;
+    color: white;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    transition: all .4s;
+    user-select: none;
+}
+
+.image:hover .text li {
+    animation: moveUp .2s forwards;
+}
+
+.image:hover .text li:nth-of-type(1) {
+    animation-delay: 0;
+}
+
+.image:hover .text li:nth-of-type(2) {
+    animation-delay: .1s;
+}
+
+.image:hover .text li:nth-of-type(3) {
+    animation-delay: .2s;
+}
+
+.image:hover .text li:nth-of-type(4) {
+    animation-delay: .3s;
+}
+
+.image:hover .text li:nth-of-type(5) {
+    animation-delay: .4s;
+}
+
+.image:hover .text li:nth-of-type(6) {
+    animation-delay: .5s;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform:translateY(2rem)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+ }
