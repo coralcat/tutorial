@@ -1,13 +1,16 @@
 body {
-  overflow: hidden;
   background-color: #eff3f7;
   color: #333;
   width: 100%;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   font: 15px/1 "Dongle", "Noto Sans KR", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
