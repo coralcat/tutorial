@@ -1,3 +1,5 @@
+/** @format */
+
 body {
   background-color: #eff3f7;
   color: #333;
@@ -24,13 +26,12 @@ body {
 
 .checkboxes {
   display: flex;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .checkbox {
   position: relative;
 }
-
 
 .checkbox input {
   appearance: none;
@@ -54,7 +55,7 @@ body {
   height: 20px;
   border: 1px solid #ddd;
   border-radius: 2px;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 /* 체크표시 */
@@ -69,14 +70,13 @@ body {
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg);
-  transition: .25s;
+  transition: 0.25s;
 }
 
 /* 체크박스 체크상태 */
 .checkbox input:checked + label::before {
   background: royalblue;
-  border-color: royalblue
-
+  border-color: royalblue;
 }
 
 .checkbox input:checked + label::after {
@@ -88,9 +88,8 @@ body {
   box-shadow: 0 0 0 2px white, 0 0 0 3px royalblue;
 }
 
-
-
 .toggle {
+  position: relative;
 }
 
 .toggle input {

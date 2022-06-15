@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <button class="btn-main">확인</button>
     <button class="btn-cancel">취소</button>
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3>확인</h3>
+          <div class="close"></div>
+        </div>
+        <div class="modal-content">
+          <p>확인되었습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-main close">확인</button>
+        </div>
+      </div>
+    </div>
   </div>
+  <script>
+    const modal = document.querySelector(".modal");
+
+    if (modal) {
+      const modalButton = document.querySelector(".btn-main");
+      modalButton.addEventListener("click", () => {
+        const modal = document.querySelector(".modal");
+        modal.classList.add("active")
+      })
+      const closes = document.querySelectorAll(".close");
+      closes.forEach(close => {
+        close.addEventListener("click", (event) => {
+          event.target.closest(".modal").classList.remove("active");
+        })
+      })
+    }
+
+  </script>
 </body>
+
 </html>
