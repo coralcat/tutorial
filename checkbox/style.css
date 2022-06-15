@@ -2,7 +2,7 @@ body {
   background-color: #eff3f7;
   color: #333;
   width: 100%;
-  font: 15px/1 "Dongle", "Noto Sans KR", sans-serif;
+  font: 15px "Dongle", "Noto Sans KR", sans-serif;
 }
 
 *,
@@ -22,27 +22,33 @@ body {
   gap: 1rem;
 }
 
+.checkboxes {
+  display: flex;
+  gap: 1rem
+}
+
 .checkbox {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: .35rem;
-  cursor: pointer;
 }
 
 
 .checkbox input {
   appearance: none;
+  display: none;
+}
+
+.checkbox label {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   position: relative;
   cursor: pointer;
   user-select: none;
 }
 
 /* 체크박스 상자 */
-.checkbox input::before {
+.checkbox input + label::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -52,32 +58,78 @@ body {
 }
 
 /* 체크표시 */
-.checkbox input::after {
+.checkbox input + label::after {
   content: "";
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 4px;
+  left: 7px;
   width: 6px;
   height: 10px;
   border: 2px solid #ddd;
   border-top: 0;
   border-left: 0;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: rotate(45deg);
   transition: .25s;
 }
 
 /* 체크박스 체크상태 */
-.checkbox input:checked::before {
+.checkbox input:checked + label::before {
   background: royalblue;
   border-color: royalblue
 
 }
 
-.checkbox input:checked::after {
+.checkbox input:checked + label::after {
   border-color: white;
 }
 
 /* 체크박스 체크 포커스상태 */
-.checkbox input:checked:focus::before {
+.checkbox input:checked:focus + label::before {
   box-shadow: 0 0 0 2px white, 0 0 0 3px royalblue;
+}
+
+
+
+.toggle {
+}
+
+.toggle input {
+  appearance: none;
+  display: none;
+}
+
+.toggle input + label {
+  position: relative;
+  user-select: none;
+  display: flex;
+  background-color: #ccc;
+  height: 14px;
+  width: 28px;
+  border-radius: 25px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.toggle input + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: 0 5px 10px 0px rgb(0 0 0 / 15%);
+}
+
+.toggle input:checked + label {
+  background-color: rgb(118 130 248 / 35%);
+  z-index: 10 !important;
+}
+
+.toggle input:checked + label::before {
+  left: 13px;
+  background-color: #5b54c6;
 }
