@@ -24,6 +24,9 @@ body {
   gap: 1rem;
 }
 
+/* =====================================================
+   Checkbox
+   ===================================================== */
 .checkboxes {
   display: flex;
   gap: 1rem;
@@ -49,7 +52,7 @@ body {
 }
 
 /* 체크박스 상자 */
-.checkbox input + label::before {
+.checkbox label::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -59,7 +62,7 @@ body {
 }
 
 /* 체크표시 */
-.checkbox input + label::after {
+.checkbox label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -93,11 +96,10 @@ body {
 }
 
 .toggle input {
-  appearance: none;
   display: none;
 }
 
-.toggle input + label {
+.toggle label {
   position: relative;
   user-select: none;
   display: flex;
@@ -109,7 +111,7 @@ body {
   cursor: pointer;
 }
 
-.toggle input + label::before {
+.toggle label::before {
   content: "";
   display: block;
   position: absolute;
